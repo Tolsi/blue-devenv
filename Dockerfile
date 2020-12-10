@@ -14,7 +14,7 @@ ENV BOLOS_ENV /opt/ledger
 
 RUN pip3 install ledgerblue
 
-RUN pip install requests ledgerblue Pillow
+RUN pip install ecpy==1.2.3 ledgerblue Pillow
 
 RUN echo "rm -rf bin/ debug/ dep/ obj/ app.hex src/glyphs.c src/glyphs.h && make BOLOS_ENV=/opt/ledger/ BOLOS_SDK=/home/blue-secure-sdk" >> ~/.bash_history
 RUN echo "rm -rf bin/ debug/ dep/ obj/ app.hex src/glyphs.c src/glyphs.h && make BOLOS_ENV=/opt/ledger/ BOLOS_SDK=/home/ledger/sdk-nanox-1.2.4-1.3" >> ~/.bash_history
